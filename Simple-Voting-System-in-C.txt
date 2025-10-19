@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main(){
+    int sum_a=0;
+    int sum_b=0;
+    char choice;
+    int vote;
+    printf("Enter Total vote counting\n");
+    scanf("%d",&vote);
+    
+        for(int i=0;i<vote;i++){
+        printf("Welcome ! here you can vote to 'A,'B\n");
+        printf("Enter A for vote 'A'  \n");
+        printf("Enter B for vote 'B'  \n");
+        printf("for exiting voting enter 'E'\n");
+        scanf(" %c",&choice);
+        
+        if(choice=='A'){
+            sum_a+=1;
+
+        }
+        if(choice=='B'){
+            sum_b+=1;
+        }
+        if(choice=='E'){
+            printf("Thanks for voting....\n");
+            printf("Exiting......\n");
+            printf("Exited!\n");
+            exit(0);
+            
+        }
+    }
+
+
+    
+    printf("Total vote opted by A is : %d\n",sum_a);
+    printf("Total vote opted by B is : %d\n",sum_b);
+    if(sum_a>sum_b){
+        printf("\nWinner is A....congratulations!");
+    }
+    if(sum_b>sum_a){
+
+         printf("Winner is B....congratulations!\n");
+    }
+    
+    if(sum_a==sum_b){
+        printf("The voting is tied between 'A' and 'B'..\n" );
+    }
+}
